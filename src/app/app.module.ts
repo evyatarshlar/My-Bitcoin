@@ -15,6 +15,9 @@ import { StatisticPageComponent } from './pages/statistic-page/statistic-page.co
 import { ChartComponent } from './cmps/chart/chart.component'
 import { NgxChartsModule } from '@swimlane/ngx-charts'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import { LoaderComponent } from './cmps/loader/loader.component';
+import { AppHeaderComponent } from './cmps/app-header/app-header.component'
+import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component'
 
 @NgModule({
     declarations: [
@@ -27,6 +30,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
         ContactDetailsComponent,
         StatisticPageComponent,
         ChartComponent,
+        LoaderComponent,
+        AppHeaderComponent,
+        PageNotFoundComponent
     ],
     imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule, BrowserAnimationsModule, NgxChartsModule],
     providers: [],

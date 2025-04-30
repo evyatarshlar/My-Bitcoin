@@ -16,7 +16,6 @@ export class AppComponent implements OnInit {
     ) { }
 
     title = 'mister-bitcoin-try';
-    currPage = 'home'
 
     ngOnInit(): void {
         this.contactService.loadContacts().subscribe({
@@ -28,9 +27,5 @@ export class AppComponent implements OnInit {
         setTimeout(() => {
             this.userService.addCoins(50)
         }, 1500);
-    }
-
-    toPage(pageName: string) {
-        this.currPage = pageName;
     }
 }
