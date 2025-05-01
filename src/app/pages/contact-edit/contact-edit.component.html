@@ -1,0 +1,22 @@
+<section class="contact-edit flex column">
+    <!-- בדיקה -->
+    <pre>{{ form.value | json }}</pre>
+  
+    <form [formGroup]="form" (ngSubmit)="onSaveContact()">
+      <!-- <h2>{{ contact._id ? 'Edit' : 'Add' }} Contact</h2> -->
+  
+      <label for="name">Name</label>
+      <input id="name" formControlName="name" placeholder="Full name" />
+  
+      <label for="phone">Phone</label>
+      <input id="phone" type="tel" formControlName="phone" placeholder="Phone number" />
+  
+      <label for="email">Email</label>
+      <input id="email" type="email" formControlName="email" placeholder="Email address" />
+  
+      <section class="btns flex align-center gap">
+        <button type="submit" class="btn">Save</button>
+        <button type="button" class="btn-regular" routerLink="/contact">Back</button>
+      </section>
+    </form>
+  </section>

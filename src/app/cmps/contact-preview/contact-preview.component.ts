@@ -10,6 +10,7 @@ export class ContactPreviewComponent  {
 
     @Input() contact: Contact
     @Output() onSelect = new EventEmitter<string>()
+    @Output() remove = new EventEmitter<string>()
     constructor() { }
 
 

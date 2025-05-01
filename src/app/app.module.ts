@@ -10,14 +10,15 @@ import { ContactPageComponent } from './pages/contact-page/contact-page.componen
 import { HomePageComponent } from './pages/home-page/home-page.component'
 import { HttpClientModule } from '@angular/common/http'
 import { ContactDetailsComponent } from './pages/contact-details/contact-details.component'
-import { FormsModule } from '@angular/forms'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 import { StatisticPageComponent } from './pages/statistic-page/statistic-page.component'
 import { ChartComponent } from './cmps/chart/chart.component'
 import { NgxChartsModule } from '@swimlane/ngx-charts'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { LoaderComponent } from './cmps/loader/loader.component';
 import { AppHeaderComponent } from './cmps/app-header/app-header.component'
-import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component'
+import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
+import { ContactEditComponent } from './pages/contact-edit/contact-edit.component'
 
 @NgModule({
     declarations: [
@@ -32,9 +33,16 @@ import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.com
         ChartComponent,
         LoaderComponent,
         AppHeaderComponent,
-        PageNotFoundComponent
+        PageNotFoundComponent,
+        ContactEditComponent
     ],
-    imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule, BrowserAnimationsModule, NgxChartsModule],
+    imports: [BrowserModule, 
+        AppRoutingModule, 
+        HttpClientModule, 
+        FormsModule, 
+        BrowserAnimationsModule, 
+        NgxChartsModule,
+        ReactiveFormsModule],
     providers: [],
     bootstrap: [AppComponent],
 })
